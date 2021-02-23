@@ -2,7 +2,8 @@
 	"name": "capacitor-firebase-auth",
 	"version": "2.3.5",
 	"description": "Capacitor plugin for Firebase Authentication",
-	"main": "dist/esm/index.js",
+	"main": "dist/plugin.js",
+	"module": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
 	"scripts": {
 		"build": "npm run clean && tsc --project tsconfig.json && rollup -c rollup.config.js",
