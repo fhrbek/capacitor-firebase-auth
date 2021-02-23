@@ -5,7 +5,7 @@
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
 	"scripts": {
-		"build": "npm run clean && tsc --project tsconfig.json",
+		"build": "npm run clean && tsc --project tsconfig.json && rollup -c rollup.config.js",
 		"pack": "npm pack && mv capacitor-firebase-auth-2.*.tgz capacitor-firebase-auth-nightly.tgz",
 		"clean": "rimraf ./dist",
 		"watch": "tsc --watch",
@@ -17,13 +17,15 @@
 		"@capacitor/core": "latest"
 	},
 	"devDependencies": {
-		"rimraf": "^3.0.0",
-		"typescript": "^3.9.5",
+		"@capacitor/android": "latest",
 		"@capacitor/ios": "latest",
-		"@capacitor/android": "latest"
+		"@rollup/plugin-node-resolve": "^11.2.0",
+		"rimraf": "^3.0.0",
+		"rollup": "^2.39.1",
+		"typescript": "^3.9.5"
 	},
 	"peerDependencies": {
-		"firebase": "^7.24.0",
+		"firebase": "^8.0.0",
 		"rxjs": "~6.6.3"
 	},
 	"files": [
