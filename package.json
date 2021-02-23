@@ -9,6 +9,7 @@
 		"pack": "npm pack && mv capacitor-firebase-auth-2.*.tgz capacitor-firebase-auth-nightly.tgz",
 		"clean": "rimraf ./dist",
 		"watch": "tsc --watch",
+		"prepare": "npm run clean && tsc --project tsconfig.json && rollup -c rollup.config.js",
 		"prepublishOnly": "npm run build"
 	},
 	"author": "Bernardo Baumblatt",
